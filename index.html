@@ -6,148 +6,123 @@
     <title>Ooredoo Money Lottery</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(120deg, #ff5f6d, #ffc371);
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+            background-color: #ff5f6d;
+            padding: 20px 0;
+            text-align: center;
             color: #fff;
+        }
+
+        .header img {
+            max-width: 120px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ff5f6d;
             text-align: center;
         }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .logo {
-            max-width: 150px;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            animation: fadeInDown 2s ease-in-out;
-        }
-
-        p {
+        .content p {
             font-size: 1.2rem;
-            margin-bottom: 40px;
-            animation: fadeInUp 2s ease-in-out;
+            margin-bottom: 30px;
+            max-width: 800px;
+            text-align: center;
         }
 
-        .download-btn {
-            padding: 15px 30px;
-            font-size: 1.5rem;
+        .content .download-btn {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 1.2rem;
             background-color: #ff5f6d;
-            border: none;
-            border-radius: 50px;
+            border-radius: 8px;
             color: #fff;
-            cursor: pointer;
-            text-transform: uppercase;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-            animation: pulse 2s infinite;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
         }
 
-        .download-btn:hover {
-            transform: scale(1.1);
+        .content .download-btn:hover {
+            background-color: #e04e5c;
         }
 
-        .images {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
             margin-top: 40px;
         }
 
-        .images img {
-            max-width: 200px;
-            margin: 10px;
-            animation: bounceIn 2s ease-in-out;
+        .grid img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .grid img:hover {
+            transform: scale(1.05);
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        @keyframes bounceIn {
-            from {
-                opacity: 0;
-                transform: scale(0.3);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
         }
 
         @media (max-width: 600px) {
-            h1 {
+            .content h1 {
                 font-size: 2rem;
             }
 
-            p {
+            .content p {
                 font-size: 1rem;
             }
 
-            .download-btn {
-                padding: 10px 20px;
-                font-size: 1.2rem;
-            }
-
-            .images img {
-                max-width: 250px;
+            .content .download-btn {
+                padding: 10px 30px;
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <img src="logo.png" alt="Ooredoo Money Lottery Logo" class="logo">
-        <h1>Ooredoo Money Lottery</h1>
-        <p>Join the lottery and stand a chance to win exciting prizes!</p>
-        <a href="./app-release-2.apk"> <button class="download-btn">Download</button></a>
-        <div class="images">
+    <div class="header">
+        <img src="logo.png" alt="Ooredoo Money Lottery Logo">
+    </div>
+
+    <div class="content">
+        <h1>Join the Ooredoo Money Lottery!</h1>
+        <p>Download the app now and stand a chance to win amazing prizes. Your luck is just a click away!</p>
+        <a href="./app-release-2.apk" class="download-btn">Download</a>
+        <div class="grid">
             <img src="./WhatsApp Image 2024-08-12 at 10.04.26 PM (1).jpeg" alt="Lottery Image 1">
             <img src="./WhatsApp Image 2024-08-12 at 10.04.26 PM (2).jpeg" alt="Lottery Image 2">
             <img src="./WhatsApp Image 2024-08-12 at 10.04.27 PM.jpeg" alt="Lottery Image 3">
         </div>
+    </div>
+
+    <div class="footer">
+        © 2024 Ooredoo Money Lottery. All rights reserved.
     </div>
 
 </body>
