@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ooredoo Money Lottery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #ff5f6d, #ffc371);
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .download-btn {
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            background-color: #ff5f6d;
+            border: none;
+            border-radius: 50px;
+            color: #fff;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .images img {
+            max-width: 200px;
+            margin: 10px;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounceIn {
+            from {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .download-btn {
+                padding: 10px 20px;
+                font-size: 1.2rem;
+            }
+
+            .images img {
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="logo.png" alt="Ooredoo Money Lottery Logo" class="logo">
+        <h1>Ooredoo Money Lottery</h1>
+        <p>Join the lottery and stand a chance to win exciting prizes!</p>
+        <a href="./app-release-2.apk"> <button class="download-btn">Download</button></a>
+        <div class="images">
+            <img src="./WhatsApp Image 2024-08-12 at 10.04.26 PM (1).jpeg" alt="Lottery Image 1">
+            <img src="./WhatsApp Image 2024-08-12 at 10.04.26 PM (2).jpeg" alt="Lottery Image 2">
+            <img src="./WhatsApp Image 2024-08-12 at 10.04.27 PM.jpeg" alt="Lottery Image 3">
+        </div>
+    </div>
+
+</body>
+</html>
